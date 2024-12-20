@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Troubleshooting Helper</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="container-box">
+            <h1 class="text-center mb-4">Coding Troubleshooting Helper</h1>
+            
+            <!-- Problem Selection -->
+            <div class="mb-4">
+                <label for="problemDropdown" class="form-label">Select a problem:</label>
+                <select id="problemDropdown" class="form-select mb-4">
+                    <option selected disabled>Choose a coding problem</option>
+                    <option value="0">Syntax error</option>
+                    <option value="1">Null pointer exception</option>
+                    <option value="2">Application not responding</option>
+                    <option value="3">API call failed</option>
+                </select>
+                <div class="btn-container d-flex justify-content-center align-items-center">
+                    <button id="searchBtn" class="btn btn-primary w-100">Find Solution</button>
+                </div>
+            </div>
+
+            <!-- Suggested Solution -->
+            <div id="solutionContainer" class="d-none">
+                <h3>Suggested Solution</h3>
+                <p><strong>Problem:</strong> <span id="problemText"></span></p>
+                <p><strong>Solution:</strong> <span id="solutionText"></span></p>
+
+                <!-- Rating Section -->
+                <label for="userRating" class="form-label mt-3">Rate this solution (1-5):</label>
+                <select id="userRating" class="form-select w-25">
+                    <option selected disabled>Choose rating</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <button id="submitRatingBtn" class="btn btn-success mt-3">Submit Feedback</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
